@@ -19,7 +19,7 @@ fn main() {
     .arg(Arg::with_name("context")
         .help("number of lines to print before and after search")
         .takes_value(true)
-        .required(true))
+        .required(false))
     .get_matches();
 
     let search_term = args.value_of("pattern").unwrap();
