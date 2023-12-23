@@ -25,7 +25,7 @@ Before you can build and use Grep-Lite, make sure you have the following tools i
 Clone the repository and build the executable using the Rust compiler:
 
 ```bash
-git clone https://github.com/your_username/grep-lite.git
+git clone https://github.com/anonymousMornach/Grep-Lite
 cd grep-lite
 cargo build --release
 ```
