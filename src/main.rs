@@ -5,6 +5,7 @@ dark square is a picture feverishly turned--in search of what?
 It is the same with books. What do we seek through millions of pages?";
     pattern(&search_term, &quote);
     manual(&search_term, &quote);
+    enumerate(&search_term, &quote);
 }
 //using pattern
 fn pattern(search_term:&str, quote:&str)
@@ -32,5 +33,18 @@ fn manual(search_term:&str, quote:&str)
             println!("{}: {}", line_num, line);
         }
         line_num += 1;
+    }
+}
+
+//enumerate method
+fn enumerate(search_term:&str, quote:&str)
+{
+    for (idx, line) in quote.lines().enumerate()
+    {
+        if line.contains(search_term)
+        {
+            let line_num = idx + 1;
+            println!("{}: {}", line_num, line);
+        }
     }
 }
