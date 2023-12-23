@@ -13,6 +13,13 @@ Grep-Lite is a simple command-line utility that searches for patterns in a given
   - [Grep-Lite Function](#grep-lite-function)
 - [License](#license)
 
+## Prerequisites
+
+Before you can build and use Grep-Lite, make sure you have the following tools installed on your system:
+
+- [Git](https://git-scm.com/)
+- [Rust](https://www.rust-lang.org/)
+
 ## Installation
 
 Clone the repository and build the executable using the Rust compiler:
@@ -51,6 +58,12 @@ Search for the pattern "TODO" in all Rust files within the current directory:
 ```
 
 ## Documentation
+
+To generate and view the documentation for Grep-Lite, use the following commands:
+
+```bash
+cargo doc --no-deps --open
+```
 
 ### File Structure
 
