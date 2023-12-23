@@ -79,6 +79,46 @@ The `main.rs` file initializes the command-line interface using the `clap` libra
 
 The `grep_lite` function, implemented in the `lib.rs` file, performs a two-pass search through the specified file. It uses the `regex` library to find matches and then extracts contextual lines around each match. The results are then printed to the console, indicating the line number and content.
 
+### Adding to Path
+To add Grep-Lite to your system's PATH so that it can be used as a command globally, follow these steps for Windows, macOS, and Linux.
+
+### Windows:
+
+1. **Find the executable:**
+   After building Grep-Lite, locate the executable file. In your case, it should be located at `target/debug/greplite.exe`.
+
+2. **Add to PATH:**
+   - Right-click on the Start menu and select "System".
+   - Click on "Advanced system settings" on the left.
+   - Click on the "Environment Variables..." button.
+   - Under "System variables", find the "Path" variable, and click "Edit...".
+   - Click "New" and add the directory path where `greplite.exe` is located.
+   - Click "OK" to close each dialog box.
+
+3. **Verify installation:**
+   Open a new command prompt and type `greplite --version` to verify that Grep-Lite is now in your PATH.
+
+### macOS/Linux:
+
+1. **Find the executable:**
+   After building Grep-Lite, locate the executable file. In your case, it should be located at `grep-lite/target/debug/greplite`.
+
+2. **Add to PATH:**
+   You can add the following line to your shell profile file (e.g., `~/.bashrc`, `~/.zshrc`, or `~/.bash_profile`):
+
+   ```bash
+   export PATH="<path>/grep-lite/target/debug:$PATH"
+   ```
+
+   Make sure to adjust the path accordingly.
+
+   Then, run `source ~/.bashrc` (or the appropriate file based on your shell) to apply the changes.
+
+3. **Verify installation:**
+   Open a new terminal and type `greplite --version` to verify that Grep-Lite is now in your PATH.
+
+Now, you should be able to use `greplite` as a command globally on your system. Remember to replace the path in the instructions with the correct path to your Grep-Lite executable.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Feel free to use, modify, and distribute this code for your own purposes.
