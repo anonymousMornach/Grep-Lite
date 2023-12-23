@@ -31,6 +31,7 @@ fn main() {
     else{
         context_lines = 1
     }
-    let file = args.value_of("input").unwrap_or("-");
+
+    let file = args.value_of("filename").unwrap_or("text.txt");
     grep_lite(&search_term, context_lines, &file );
 }
